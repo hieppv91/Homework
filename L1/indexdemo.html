@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+       Biến i kiểu số nguyên, có giá trị là 10
+        Biến f kiểu số thực, có giá trị là 20.5
+        Biến b kiểu logic, có giá trị là true
+        Biến s kiểu chuỗi, có giá trị là “Hà Nội”.
+        Sử dụng hàm document.write() để viết kết quả ra màn hình.
+   -->
+
+    <!---<button type="button" onclick="Summary()">Summary</button>
+    
+    <button type="button" onclick="ShowData()">Show Data</button>
+    <script src="custom.js"></script>
+       -->
+    <script>  
+    
+    function run() 
+        {
+            var foo = "Foo";
+            let bar = "Bar";
+          
+            console.log(foo, bar); // Foo Bar
+          
+            {
+              var moo = "Mooo"
+              let baz = "Bazz";
+              console.log(moo, baz); // Mooo Bazz
+            }
+          
+            console.log(moo); // Mooo
+            console.log(baz); // ReferenceError
+        }
+        run();
+        let i = 10;
+        let f = 20.5
+        let b = true
+        let s = 'Hà Nội'
+        document.write('i = ' + i)
+        document.write('<br/>')
+        document.write('f = ' + f)
+        document.write('<br/>')
+        document.write('b = ' + b)
+        document.write('<br/>')
+        document.write('s = ' + s)
+    </script>
+</body>
+
+</html>

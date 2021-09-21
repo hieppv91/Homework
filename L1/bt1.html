@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: cornsilk;
+        }
+
+        h1 {
+            color: darkblue;
+            background-color: cyan;
+        }
+
+        table {
+            border: darkblue solid 1px;
+            width: 100%;
+            min-height: 300px;
+        }
+
+        input {
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="login.php" method="POST">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="FullName">Họ và tên</label>
+                </td>
+                <td>
+                    <input type="text" name="FullName"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="BrithDay">Ngày Sinh</label>
+                </td>
+                <td>
+                    <input type="date" name="BrithDay"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Giới tính</label>
+                </td>
+                <td>
+                    <input type="radio" name="Sex" value="Male" checked="true">Nam
+                    <input type="radio" name="Sex" value="Female">Nu
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Address">Đia chỉ</label>
+                </td>
+                <td>
+                    <input type="textarea" name="Address"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Lớp</label>
+                </td>
+                <td>
+                    <select>
+                        <option value="---Chọn lớp---" selected=true>---Chọn lớp---</option>
+                        <option value="Class1">Class1</option>
+                        <option value="Class2">Class2</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="Email">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="Email"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="DienThoai">Điện thoại</label>
+                </td>
+                <td>
+                    <input type="text" name="phone_number" pattern="0|84[1-9][0-9]{8}                   "><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Đăng ký</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

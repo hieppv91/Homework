@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Input number one" id="Number1">
+    <input type="text" placeholder="Input number two" id="Number2">
+    <input type="text" name="" id="Result">
+    <br>
+    <br>
+    <input type="button" id="Addition" value="Addition(+)">
+    <input type="button" id="Subtraction" value="Subtraction(-)">
+    <input type="button" id="Multiplication" value="Multiplication(x)">
+    <input type="button" id="Division" value="Division(/)">
+    <script>
+        let numberOne = document.getElementById('Number1').value;
+        let numberTwo = document.getElementById('Number2').value;
+
+        let Addition = document.getElementById('Addition');
+        let Subtraction = document.getElementById('Subtraction');
+        let Multiplication = document.getElementById('Multiplication');
+        let Division = document.getElementById('Division');
+
+        Addition.addEventListener('click', function Add() {
+            document.getElementById('Result').innerText = numberOne + numberTwo;
+        });
+        Subtraction.addEventListener('click', function Sub(numberOne, numberTwo) {
+            document.getElementById('Result').innerText = numberOne - numberTwo;
+        });
+        Multiplication.addEventListener('click', function Mul(numberOne, numberTwo) {
+            document.getElementById('Result').innerText = numberOne * numberTwo;
+        });
+        Division.addEventListener('click', function Div(numberOne, numberTwo) {
+            document.getElementById('Result').innerText = numberOne / numberTwo;
+        });
+    </script>
+</body>
+
+</html>

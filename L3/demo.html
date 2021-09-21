@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'SF UI Display', sans-serif;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100%;min-height: 50px;">
+        <div style="width: 30%;float: left;">
+            <label for="Amount">Amount</label><br>
+            <input type="text" name="Amount" id="Amount">
+        </div>
+
+        <div style="width: 30%;float: left;">
+            <label for="From_Currency">Amount</label><br>
+            <select name="From_Currency" id="From_Currency">
+                <option value="VietNam" id=VietNam>VietNam</option>
+                <option value="USD" id="USD">USD</option>
+            </select>
+        </div>
+
+        <div style="width: 30%;float: left;">
+            <label for="To_Currency">Amount</label><br>
+            <select name="To_Currency" id="To_Currency">
+                <option value="VietNam" id=VietNam>VietNam</option>
+                <option value="USD" id="USD">USD</option>
+            </select>
+        </div>
+
+        <div style="width: 10%;float: left;">
+            <br>
+            <input type="button" value="Convert" id="Convert">
+        </div>
+    </div>
+    <div style="width: 100%;">
+        <p id="Result">
+            Result:
+        </p>
+    </div>
+    <script>
+        let txtAmount = document.getElementById('Amount');
+        let slFrom_Currency = document.getElementById('From_Currency');
+        let slTo_Currency = document.getElementById('To_Currency');
+        let btnConvert = document.getElementById('Convert');
+
+        let Amount = 0, From_Currency = null,To_Currency=null;
+
+        txtAmount.addEventListener("change", function () {
+            Amount = parseFloat(document.getElementById('Amount').value);
+        });
+        slFrom_Currency.addEventListener("change", function () {
+            From_Currency = document.getElementById('From_Currency').value;
+        });
+        slTo_Currency.addEventListener("change", function () {
+            To_Currency = document.getElementById('To_Currency').value;
+        });
+
+        btnConvert.addEventListener("click", function () {
+            if (From_Currency == "VietNam")
+                if (To_Currency == "VietNam") {
+                    document.getElementById('Result').innerText = "Result:" + Amount;
+                }
+                else {
+                    document.getElementById('Result').innerText = "Result:" + Amount * 23000;
+                }
+            else
+                if (From_Currency == "USD")
+                    if (To_Currency == "VietNam") {
+                        document.getElementById('Result').innerText = "Result:" + Amount / 23000;
+                    }
+                    else {
+                        document.getElementById('Result').innerText = "Result:" + Amount;
+                    }
+        });
+    </script>
+</body>
+
+</html>
